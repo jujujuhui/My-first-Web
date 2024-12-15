@@ -75,12 +75,13 @@ body, html {
 
 
 .page2 {
-  background-color: #ffffff; /* 흰 배경*/
+  background-color: #ffffff; /* 흰 배경 */
   z-index: 2;
   position: absolute;
   top: 100vh; /* 두 번째 페이지가 첫 번째 아래에 위치 */
   left: 0;
   width: 100%;
-  align-items: center;
-
+  display: flex;
+  justify-content: center; /* 중앙 정렬 */
+  align-items: center; /* 중앙 정렬 */
 }

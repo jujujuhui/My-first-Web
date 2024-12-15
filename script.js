@@ -58,7 +58,14 @@ const observer = new IntersectionObserver(entries => {
       isOnPage2 = false;
     }
   });
+}, {
+  rootMargin: '-50% 0px' // 루트 마진 설정
 });
 
 // page2 요소 관찰 시작
 observer.observe(page2);
+
+document.querySelectorAll('.card').forEach(card => {
+    const imageUrl = card.getAttribute('data-image');
+    card.style.backgroundImage = `url(${imageUrl})`;
+});

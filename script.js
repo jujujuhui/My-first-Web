@@ -1,3 +1,4 @@
+//스크롤 이벤트를 쌓아서 페이지 이동
 let scrollThreshold = 1000; // 사용자가 스크롤해야 하는 거리
 let accumulatedScroll = 0; // 스크롤을 누적시킬 변수
 
@@ -65,7 +66,39 @@ const observer = new IntersectionObserver(entries => {
 // page2 요소 관찰 시작
 observer.observe(page2);
 
-document.querySelectorAll('.card').forEach(card => {
+// 모달팝업 코드
+const modalContents = [
+    { title: '카드 1 제목', description: '카드 1 설명', image: 'https://via.placeholder.com/150' },
+    { title: '카드 2 제목', description: '카드 2 설명', image: 'https://via.placeholder.com/150' },
+    { title: '카드 3 제목', description: '카드 3 설명', image: 'https://via.placeholder.com/150' },
+    { title: '카드 4 제목', description: '카드 4 설명', image: 'https://via.placeholder.com/150' },
+    { title: '카드 5 제목', description: '카드 5 설명', image: 'https://via.placeholder.com/150' },
+    { title: '카드 6 제목', description: '카드 6 설명', image: 'https://via.placeholder.com/150' },
+    { title: '카드 7 제목', description: '카드 7 설명', image: 'https://via.placeholder.com/150' },
+    { title: '카드 8 제목', description: '카드 8 설명', image: 'https://via.placeholder.com/150' },
+    { title: '카드 9 제목', description: '카드 9 설명', image: 'https://via.placeholder.com/150' }
+];
+
+function cardClick(cardNumber) {
+    const targetModal = document.querySelector(`.card[data-target="#modal${cardNumber}"]`).getAttribute('data-target');
+    const modal = document.querySelector(targetModal);
+    modal.style.display = 'block';
+}
+
+function closeModal(modalId) {
+    const modal = document.querySelector(modalId);
+    modal.style.display = 'none';
+}
+
+// 팝업창 이외의 빈 공간을 클릭하면 팝업이 꺼지도록 설정
+window.addEventListener('click', (event) => {
+    if (event.target.classList.contains('modal')) {
+        event.target.style.display = 'none';
+    }
+});
+
+document.querySelectorAll('.card').forEach((card, index) => {
     const imageUrl = card.getAttribute('data-image');
     card.style.backgroundImage = `url(${imageUrl})`;
+    card.addEventListener('click', () => cardClick(index + 1));
 });

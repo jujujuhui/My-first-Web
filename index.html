@@ -6,6 +6,7 @@
   <title>홍주희의 머리속 체험하기</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="cardstyle.css">
+  <link rel="stylesheet" href="popup.css"> <!-- popup.css 추가 -->
 </head>
 <body>
 
@@ -19,44 +20,144 @@
 </section>
 <section class="page page2">
   <div class="card-container">
-    <div class="card" data-image="assets/image1.jpg">
+    <div class="card" data-target="#modal1">
       <h2>키쿠리1</h2>
       <p>키쿠리 설명1</p>
     </div>
-    <div class="card" data-image="assets/image2.jpg">
+    <div class="card" data-target="#modal2">
       <h2>키쿠리2</h2>
       <p>키쿠리 설명2</p>
     </div>
-    <div class="card" data-image="assets/image3.jpg">
+    <div class="card" data-target="#modal3">
       <h2>키쿠리3</h2>
       <p>키쿠리 설명3</p>
     </div>
-    <div class="card" data-image="assets/image1.jpg">
+    <div class="card" data-target="#modal4">
       <h2>키쿠리4</h2>
       <p>키쿠리 설명4</p>
     </div>
-    <div class="card" data-image="assets/image2.jpg">
+    <div class="card" data-target="#modal5">
       <h2>키쿠리5</h2>
       <p>키쿠리 설명5</p>
     </div>
-    <div class="card" data-image="assets/image3.jpg">
+    <div class="card" data-target="#modal6">
       <h2>키쿠리6</h2>
       <p>키쿠리 설명6</p>
     </div>
-    <div class="card" data-image="assets/image1.jpg">
+    <div class="card" data-target="#modal7">
       <h2>키쿠리7</h2>
       <p>키쿠리 설명7</p>
     </div>
-    <div class="card" data-image="assets/image2.jpg">
+    <div class="card" data-target="#modal8">
       <h2>키쿠리8</h2>
       <p>키쿠리 설명8</p>
     </div>
-    <div class="card" data-image="assets/image3.jpg">
+    <div class="card" data-target="#modal9">
       <h2>키쿠리9</h2>
       <p>키쿠리 설명9</p>
     </div>
   </div>
 </section>
+
+<!-- 모달 팝업들 -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('#modal1')">&times;</span>
+    <h2>카드 1 제목</h2>
+    <div class="content">
+      <img src="https://via.placeholder.com/150" alt="이미지">
+      <p>카드 1 설명</p>
+    </div>
+  </div>
+</div>
+
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('#modal2')">&times;</span>
+    <h2>카드 2 제목</h2>
+    <div class="content">
+      <img src="https://via.placeholder.com/150" alt="이미지">
+      <p>카드 2 설명</p>
+    </div>
+  </div>
+</div>
+
+<div id="modal3" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('#modal3')">&times;</span>
+    <h2>카드 3 제목</h2>
+    <div class="content">
+      <img src="https://via.placeholder.com/150" alt="이미지">
+      <p>카드 3 설명</p>
+    </div>
+  </div>
+</div>
+
+<div id="modal4" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('#modal4')">&times;</span>
+    <h2>카드 4 제목</h2>
+    <div class="content">
+      <img src="https://via.placeholder.com/150" alt="이미지">
+      <p>카드 4 설명</p>
+    </div>
+  </div>
+</div>
+
+<div id="modal5" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('#modal5')">&times;</span>
+    <h2>카드 5 제목</h2>
+    <div class="content">
+      <img src="https://via.placeholder.com/150" alt="이미지">
+      <p>카드 5 설명</p>
+    </div>
+  </div>
+</div>
+
+<div id="modal6" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('#modal6')">&times;</span>
+    <h2>카드 6 제목</h2>
+    <div class="content">
+      <img src="https://via.placeholder.com/150" alt="이미지">
+      <p>카드 6 설명</p>
+    </div>
+  </div>
+</div>
+
+<div id="modal7" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('#modal7')">&times;</span>
+    <h2>카드 7 제목</h2>
+    <div class="content">
+      <img src="https://via.placeholder.com/150" alt="이미지">
+      <p>카드 7 설명</p>
+    </div>
+  </div>
+</div>
+
+<div id="modal8" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('#modal8')">&times;</span>
+    <h2>카드 8 제목</h2>
+    <div class="content">
+      <img src="https://via.placeholder.com/150" alt="이미지">
+      <p>카드 8 설명</p>
+    </div>
+  </div>
+</div>
+
+<div id="modal9" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('#modal9')">&times;</span>
+    <h2>카드 9 제목</h2>
+    <div class="content">
+      <img src="https://via.placeholder.com/150" alt="이미지">
+      <p>카드 9 설명</p>
+    </div>
+  </div>
+</div>
 
   <!--
   <section class="page page3">

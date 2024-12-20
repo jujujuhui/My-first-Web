@@ -66,18 +66,6 @@ const observer = new IntersectionObserver(entries => {
 // page2 요소 관찰 시작
 observer.observe(page2);
 
-// 모달팝업 코드
-const modalContents = [
-    { title: '카드 1 제목', description: '카드 1 설명', image: 'https://via.placeholder.com/150' },
-    { title: '카드 2 제목', description: '카드 2 설명', image: 'https://via.placeholder.com/150' },
-    { title: '카드 3 제목', description: '카드 3 설명', image: 'https://via.placeholder.com/150' },
-    { title: '카드 4 제목', description: '카드 4 설명', image: 'https://via.placeholder.com/150' },
-    { title: '카드 5 제목', description: '카드 5 설명', image: 'https://via.placeholder.com/150' },
-    { title: '카드 6 제목', description: '카드 6 설명', image: 'https://via.placeholder.com/150' },
-    { title: '카드 7 제목', description: '카드 7 설명', image: 'https://via.placeholder.com/150' },
-    { title: '카드 8 제목', description: '카드 8 설명', image: 'https://via.placeholder.com/150' },
-    { title: '카드 9 제목', description: '카드 9 설명', image: 'https://via.placeholder.com/150' }
-];
 
 function cardClick(cardNumber) {
     const targetModal = document.querySelector(`.card[data-target="#modal${cardNumber}"]`).getAttribute('data-target');
@@ -102,3 +90,19 @@ document.querySelectorAll('.card').forEach((card, index) => {
     card.style.backgroundImage = `url(${imageUrl})`;
     card.addEventListener('click', () => cardClick(index + 1));
 });
+
+function showPage(modalId, pageNum) {
+  const pages = document.querySelectorAll(`${modalId} .modal-page`);
+  pages.forEach((page, index) => {
+    page.style.display = (index === pageNum - 1) ? 'block' : 'none';
+  });
+}
+
+function scrollCarousel(modalId, direction) {
+  const carousel = document.querySelector(`${modalId} .carousel-inner`);
+  const items = carousel.querySelectorAll('.card');
+  currentIndex = (currentIndex + direction + items.length) % items.length;
+  carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+let currentIndex = 0;

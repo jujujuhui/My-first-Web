@@ -1,4 +1,4 @@
-@font-face { /* 복사해온 웹 폰트 */
+@font-face {
   font-family: 'TTBookendBatangR'; /* 폰트 이름 */
   src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-2@1.0/TTBookendBatangR.woff2') format('woff2');
   font-weight: 400;

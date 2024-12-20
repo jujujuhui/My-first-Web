@@ -6,7 +6,7 @@
   <title>홍주희의 머리속 체험하기</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="cardstyle.css">
-  <link rel="stylesheet" href="popup.css"> <!-- popup.css 추가 -->
+  <link rel="stylesheet" href="popup.css">
 </head>
 <body>
 
@@ -21,38 +21,47 @@
 <section class="page page2">
   <div class="card-container">
     <div class="card" data-target="#modal1">
+      <img src="https://via.placeholder.com/150" alt="키쿠리1 이미지">
       <h2>키쿠리1</h2>
       <p>키쿠리 설명1</p>
     </div>
     <div class="card" data-target="#modal2">
+      <img src="https://via.placeholder.com/150" alt="키쿠리2 이미지">
       <h2>키쿠리2</h2>
       <p>키쿠리 설명2</p>
     </div>
     <div class="card" data-target="#modal3">
+      <img src="https://via.placeholder.com/150" alt="키쿠리3 이미지">
       <h2>키쿠리3</h2>
       <p>키쿠리 설명3</p>
     </div>
     <div class="card" data-target="#modal4">
+      <img src="https://via.placeholder.com/150" alt="키쿠리4 이미지">
       <h2>키쿠리4</h2>
       <p>키쿠리 설명4</p>
     </div>
     <div class="card" data-target="#modal5">
+      <img src="https://via.placeholder.com/150" alt="키쿠리5 이미지">
       <h2>키쿠리5</h2>
       <p>키쿠리 설명5</p>
     </div>
     <div class="card" data-target="#modal6">
+      <img src="https://via.placeholder.com/150" alt="키쿠리6 이미지">
       <h2>키쿠리6</h2>
       <p>키쿠리 설명6</p>
     </div>
     <div class="card" data-target="#modal7">
+      <img src="https://via.placeholder.com/150" alt="키쿠리7 이미지">
       <h2>키쿠리7</h2>
       <p>키쿠리 설명7</p>
     </div>
     <div class="card" data-target="#modal8">
+      <img src="https://via.placeholder.com/150" alt="키쿠리8 이미지">
       <h2>키쿠리8</h2>
       <p>키쿠리 설명8</p>
     </div>
     <div class="card" data-target="#modal9">
+      <img src="https://via.placeholder.com/150" alt="키쿠리9 이미지">
       <h2>키쿠리9</h2>
       <p>키쿠리 설명9</p>
     </div>
@@ -64,9 +73,24 @@
   <div class="modal-content">
     <span class="close" onclick="closeModal('#modal1')">&times;</span>
     <h2>카드 1 제목</h2>
-    <div class="content">
-      <img src="https://via.placeholder.com/150" alt="이미지">
-      <p>카드 1 설명</p>
+    <div class="modal-page" id="modal1-page1">
+      <div class="content">
+        <img src="https://via.placeholder.com/150" alt="이미지">
+        <p>카드 1 설명</p>
+      </div>
+    </div>
+    <div class="modal-page" id="modal1-page2" style="display: none;">
+      <h3>추가 페이지 1-2</h3>
+      <p>추가 페이지 1-2의 내용</p>
+    </div>
+    <div class="modal-buttons">
+      <button onclick="showPage('#modal1', 1)">이전</button>
+      <button onclick="showPage('#modal1', 2)">다음</button>
+    </div>
+    ㅌ        </div>
+      </div>
+      <button class="carousel-control prev" onclick="scrollCarousel('#modal1', -1)">&#10094;</button>
+      <button class="carousel-control next" onclick="scrollCarousel('#modal1', 1)">&#10095;</button>
     </div>
   </div>
 </div>
@@ -79,6 +103,39 @@
       <img src="https://via.placeholder.com/150" alt="이미지">
       <p>카드 2 설명</p>
     </div>
+    <div class="modal-page" id="modal2-page1">
+      <h3>추가 페이지 2-1</h3>
+      <p>추가 페이지 2-1의 내용</p>
+    </div>
+    <div class="modal-page" id="modal2-page2" style="display: none;">
+      <h3>추가 페이지 2-2</h3>
+      <p>추가 페이지 2-2의 내용</p>
+    </div>
+    <div class="modal-buttons">
+      <button onclick="showPage('#modal2', 1)">이전</button>
+      <button onclick="showPage('#modal2', 2)">다음</button>
+    </div>
+    <div class="carousel">
+      <div class="carousel-inner">
+        <div class="card">
+          <img src="https://via.placeholder.com/100" alt="캐러셀 이미지 1">
+          <h2>카드 1</h2>
+          <p>설명 1</p>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/100" alt="캐러셀 이미지 2">
+          <h2>카드 2</h2>
+          <p>설명 2</p>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/100" alt="캐러셀 이미지 3">
+          <h2>카드 3</h2>
+          <p>설명 3</p>
+        </div>
+      </div>
+      <button class="carousel-control prev" onclick="scrollCarousel('#modal2', -1)">&#10094;</button>
+      <button class="carousel-control next" onclick="scrollCarousel('#modal2', 1)">&#10095;</button>
+    </div>
   </div>
 </div>
 
@@ -89,6 +146,10 @@
     <div class="content">
       <img src="https://via.placeholder.com/150" alt="이미지">
       <p>카드 3 설명</p>
+    </div>
+    <div class="modal-page">
+      <h3>추가 페이지 3</h3>
+      <p>추가 페이지 3의 내용</p>
     </div>
   </div>
 </div>
@@ -155,6 +216,39 @@
     <div class="content">
       <img src="https://via.placeholder.com/150" alt="이미지">
       <p>카드 9 설명</p>
+    </div>
+    <div class="modal-page" id="modal9-page1">
+      <h3>추가 페이지 9-1</h3>
+      <p>추가 페이지 9-1의 내용</p>
+    </div>
+    <div class="modal-page" id="modal9-page2" style="display: none;">
+      <h3>추가 페이지 9-2</h3>
+      <p>추가 페이지 9-2의 내용</p>
+    </div>
+    <div class="modal-buttons">
+      <button onclick="showPage('#modal9', 1)">이전</button>
+      <button onclick="showPage('#modal9', 2)">다음</button>
+    </div>
+    <div class="carousel">
+      <div class="carousel-inner">
+        <div class="card">
+          <img src="https://via.placeholder.com/100" alt="캐러셀 이미지 1">
+          <h2>카드 1</h2>
+          <p>설명 1</p>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/100" alt="캐러셀 이미지 2">
+          <h2>카드 2</h2>
+          <p>설명 2</p>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/100" alt="캐러셀 이미지 3">
+          <h2>카드 3</h2>
+          <p>설명 3</p>
+        </div>
+      </div>
+      <button class="carousel-control prev" onclick="scrollCarousel('#modal9', -1)">&#10094;</button>
+      <button class="carousel-control next" onclick="scrollCarousel('#modal9', 1)">&#10095;</button>
     </div>
   </div>
 </div>

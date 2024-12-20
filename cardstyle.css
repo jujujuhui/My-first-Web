@@ -17,6 +17,12 @@
     position: relative;
 }
 
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 .card::before {
     content: '';
     position: absolute;
